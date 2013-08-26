@@ -48,7 +48,7 @@ namespace VendorAnalysis
             if (m_ssName == "C")
             {
                 labelControl1.Text = "CC";
-                this.Text = "CostCentre Wise Filter";
+                this.Text = "CC Wise Filter";
                 PopulateCostCentre();
             }
             
@@ -152,7 +152,7 @@ namespace VendorAnalysis
                 editor.EditValue = m_iId;
             }
         }
-        #endregion
+        #endregions
 
        
 
