@@ -92,7 +92,7 @@ namespace VendorAnalysis
                 ReqListView.Columns["CostCentreId"].Visible = false;
                 ReqListView.Columns["RequestId"].Visible = false;
             }
-            ReqListView.Columns["Approved"].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            ReqListView.Columns["Approve"].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             ReqListView.Columns["Approve"].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
         }
 
