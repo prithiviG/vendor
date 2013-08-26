@@ -153,7 +153,7 @@ namespace VendorAnalysis
             for (int i = 0; i <= dtV.Rows.Count - 1; i++)
             {
                 dBand = new GridBand();
-                dBand.Name = dtV.Rows[i]["VendorName"].ToString();
+                dBand.Name = dtV.Rows[i]["Vendor"].ToString();
                 dBand.Caption = dtV.Rows[i]["VendorName"].ToString();
                 advBandedGridView1.Bands.Add(dBand);
 
