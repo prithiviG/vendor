@@ -48,7 +48,7 @@ namespace VendorAnalysis
             if (m_ssName == "C")
             {
                 labelControl1.Text = "Cost centre";
-                this.Text = "CC Wise Filter";
+                this.Text = "CostCentre Wise Filter";
                 PopulateCostCentre();
             }
             
