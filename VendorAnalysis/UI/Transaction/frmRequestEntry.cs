@@ -216,8 +216,8 @@ namespace VendorAnalysis
             int iRowId = frmRequestRegister.m_oGridView.FocusedRowHandle;
             if (dt.Rows.Count > 0)
             {
-                frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestDate", Convert.ToDateTime(dt.Rows[0]["RequestDa"]));
-                frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestNo", dt.Rows[0]["RequestNo"].ToString());
+                frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestDate", Convert.ToDateTime(dt.Rows[0]["RequestDate"]));
+                frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestNo", dt.Rows[0]["RequestNum"].ToString());
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "CCReqNo", dt.Rows[0]["CCReqNo"].ToString());
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestType", dt.Rows[0]["RequestType"].ToString());
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "CostCentre", dt.Rows[0]["CostCentre"].ToString());
