@@ -47,7 +47,7 @@ namespace VendorAnalysis
             m_dsCostcentre = clsStatics.PopulateCostCentreVendor();
             if (m_ssName == "C")
             {
-                labelControl1.Text = "CC";
+                labelControl1.Text = "Cost centre";
                 this.Text = "CC Wise Filter";
                 PopulateCostCentre();
             }
