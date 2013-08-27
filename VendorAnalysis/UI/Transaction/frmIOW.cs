@@ -223,7 +223,7 @@ namespace VendorAnalysis
                 cmdIOWLbr.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
                 if (m_dtGetDPEIOWfrm.Rows.Count > 0)
                 {
-                    if (m_sfldName == "Amount")
+                    if (m_sfldName == "Amt")
                     {
                         cmdIOWLbr.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
                     }

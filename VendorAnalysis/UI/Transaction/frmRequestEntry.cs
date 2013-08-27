@@ -217,7 +217,7 @@ namespace VendorAnalysis
             if (dt.Rows.Count > 0)
             {
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestDate", Convert.ToDateTime(dt.Rows[0]["RequestDate"]));
-                frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestNo", dt.Rows[0]["RequestNo"].ToString());
+                frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestNo", dt.Rows[0]["RequestNum"].ToString());
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "CCReqNo", dt.Rows[0]["CCReqNo"].ToString());
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "RequestType", dt.Rows[0]["RequestType"].ToString());
                 frmRequestRegister.m_oGridView.SetRowCellValue(iRowId, "CostCentre", dt.Rows[0]["CostCentre"].ToString());
@@ -1739,7 +1739,7 @@ namespace VendorAnalysis
             if (cboCC.Text == "None")
             {
                 valid = false;
-                sb.Append(" * Select Pro" + Environment.NewLine);
+                sb.Append(" * Select Project " + Environment.NewLine);
                 errorProvider1.SetError(cboCC, "Select Project");
             }
             else
@@ -2010,7 +2010,7 @@ namespace VendorAnalysis
             if (ValidRequest() == false) return;
             if (RequestView.RowCount == 0)
             {
-                MessageBox.Show("Add Material's!", "Information ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Add Material's!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             //Zero Qty Validation
