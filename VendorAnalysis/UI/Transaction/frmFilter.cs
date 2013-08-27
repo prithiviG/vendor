@@ -41,13 +41,12 @@ namespace VendorAnalysis
         #region Form Load
 
         private void frmFilter_Load(object sender, EventArgs e)
-        {
-            
+        {           
             m_dsCostcentre = new DataSet();
             m_dsCostcentre = clsStatics.PopulateCostCentreVendor();
             if (m_ssName == "C")
             {
-                labelControl1.Text = "Cost centre";
+                labelControl1.Text = "Cost centre wise";
                 this.Text = "CostCentre Wise Filter";
                 PopulateCostCentre();
             }
