@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{648831FD-B985-4740-8472-0974230FCDB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VendorAnalysis</RootNamespace>
+    <AssemblyName>VendorAnalysis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BsfGlobal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BsfGlobal.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v11.1.Extensions, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Qualifier, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2011.1.11.315, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadChart, Version=2011.1.11.315, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2011.1.11.315, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2011.1.11.315, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2011.1.11.315, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\ComponentBL.cs" />
+    <Compile Include="BL\IOWBL.cs" />
+    <Compile Include="BL\IOWDetBL.cs" />
+    <Compile Include="BL\PickListBLR.cs" />
+    <Compile Include="BL\RequestEntryBL.cs" />
+    <Compile Include="BL\TermAcceptBL.cs" />
+    <Compile Include="BL\TermCompBL.cs" />
+    <Compile Include="BL\VendorCompareBL.cs" />
+    <Compile Include="BL\VendorMainBL.cs" />
+    <Compile Include="BO\CommFun.cs" />
+    <Compile Include="BO\ComponentBO.cs" />
+    <Compile Include="BO\IOWBO.cs" />
+    <Compile Include="BL\QuotationReqestBL.cs" />
+    <Compile Include="BO\IOWDetBO.cs" />
+    <Compile Include="BO\QuotationReqestBO.cs" />
+    <Compile Include="BO\ValueDescriptionPair.cs" />
+    <Compile Include="BO\VendorCompareBO.cs" />
+    <Compile Include="BO\WorkOrderBO.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DL\ComponentDL.cs" />
+    <Compile Include="DL\IOWDetDL.cs" />
+    <Compile Include="DL\IOWDL.cs" />
+    <Compile Include="DL\PickListDLR.cs" />
+    <Compile Include="DL\QuotationReqestDL.cs" />
+    <Compile Include="DL\RequestEntryDL.cs" />
+    <Compile Include="DL\TermAcceptDL.cs" />
+    <Compile Include="DL\TermCompDL.cs" />
+    <Compile Include="DL\VendorCompareDL.cs" />
+    <Compile Include="DL\VendorMainDL.cs" />
+    <Compile Include="GL\clsStatics.cs" />
+    <Compile Include="NewMMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewMMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Register\frmRequestRPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Register\frmRequestRPT.designer.cs">
+      <DependentUpon>frmRequestRPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmAnalysis.Designer.cs">
+      <DependentUpon>frmAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmCompareList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmCompareList.Designer.cs">
+      <DependentUpon>frmCompareList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmCompare.Designer.cs">
+      <DependentUpon>frmCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmComponent.designer.cs">
+      <DependentUpon>frmComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmComponentPickList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmComponentPickList.Designer.cs">
+      <DependentUpon>frmComponentPickList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmFilter.designer.cs">
+      <DependentUpon>frmFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmIOW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmIOW.designer.cs">
+      <DependentUpon>frmIOW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmIOWDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmIOWDet.designer.cs">
+      <DependentUpon>frmIOWDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmIOWPickList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmIOWPickList.Designer.cs">
+      <DependentUpon>frmIOWPickList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmQuotationRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmQuotationRequest.Designer.cs">
+      <DependentUpon>frmQuotationRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Register\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Register\frmReport.designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmReqSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmReqSchedule.Designer.cs">
+      <DependentUpon>frmReqSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmRequestEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmRequestEntry.Designer.cs">
+      <DependentUpon>frmRequestEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menu\frmMainNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menu\frmMainNew.designer.cs">
+      <DependentUpon>frmMainNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Register\frmRequestRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Register\frmRequestRegister.Designer.cs">
+      <DependentUpon>frmRequestRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmTermsAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmTermsAccept.Designer.cs">
+      <DependentUpon>frmTermsAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmTermsComparision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmTermsComparision.Designer.cs">
+      <DependentUpon>frmTermsComparision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmVendorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmVendorMain.Designer.cs">
+      <DependentUpon>frmVendorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\XtraReport1.cs" />
+    <Compile Include="UI\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Register\frmRequestRPT.resx">
+      <DependentUpon>frmRequestRPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmAnalysis.resx">
+      <DependentUpon>frmAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmCompare.resx">
+      <DependentUpon>frmCompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmCompareList.resx">
+      <DependentUpon>frmCompareList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmComponent.resx">
+      <DependentUpon>frmComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmComponentPickList.resx">
+      <DependentUpon>frmComponentPickList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmFilter.resx">
+      <DependentUpon>frmFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmIOW.resx">
+      <DependentUpon>frmIOW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmIOWDet.resx">
+      <DependentUpon>frmIOWDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmIOWPickList.resx">
+      <DependentUpon>frmIOWPickList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmQuotationRequest.resx">
+      <DependentUpon>frmQuotationRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Register\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmReqSchedule.resx">
+      <DependentUpon>frmReqSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmRequestEntry.resx">
+      <DependentUpon>frmRequestEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menu\frmMainNew.resx">
+      <DependentUpon>frmMainNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Register\frmRequestRegister.resx">
+      <DependentUpon>frmRequestRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmResource.resx">
+      <DependentUpon>frmResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmTermsAccept.resx">
+      <DependentUpon>frmTermsAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmTermsComparision.resx">
+      <DependentUpon>frmTermsComparision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmVendorComparision.resx">
+      <DependentUpon>frmVendorComparision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmVendorMain.resx">
+      <DependentUpon>frmVendorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Transaction\frmVendorPickList.resx">
+      <DependentUpon>frmVendorPickList.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NewMMSDataSet.xsc">
+      <DependentUpon>NewMMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewMMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewMMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewMMSDataSet.xss">
+      <DependentUpon>NewMMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\VMEntities.datasource" />
+    <None Include="Properties\DataSources\VMEntities1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\Transaction\frmResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmResource.Designer.cs">
+      <DependentUpon>frmResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmVendorComparision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmVendorComparision.Designer.cs">
+      <DependentUpon>frmVendorComparision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Transaction\frmVendorPickList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Transaction\frmVendorPickList.designer.cs">
+      <DependentUpon>frmVendorPickList.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_swatch_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

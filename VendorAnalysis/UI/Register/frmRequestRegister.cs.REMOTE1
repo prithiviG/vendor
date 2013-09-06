@@ -16,8 +16,11 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 namespace VendorAnalysis
 {
     public partial class frmRequestRegister : Form
-    
-        //#region Variabless
+    {
+
+               
+
+        #region Variabless
         VendorAnalysis.BusinessLayer.RequestEntryBL oReqBL;
         public static Telerik.WinControls.UI.Docking.DocumentWindow m_oDW = new Telerik.WinControls.UI.Docking.DocumentWindow();
         public Telerik.WinControls.UI.RadPanel Radpanel { get; set; }
@@ -29,6 +32,8 @@ namespace VendorAnalysis
         DataTable dtRQC = null;
 
         #endregion
+
+
         #region Constructor
 
         public frmRequestRegister()
@@ -41,17 +46,33 @@ namespace VendorAnalysis
 
         #region Form Load
 
-        //private void frmRequestRegister_Load(object sender, EventArgs e)
-        //{
-        //    clsStatics.SetMyGraphics();
-        //    dtpFrmDate.EditValue = RequestEntryBL.GetMinDate();
-        //    dtpTodate.EditValue = DateTime.Now;
-        //    dwOptions.Hide();
-        //    dwReqCancel.Hide();
-        //    dwRegister.Show();
-        //    PopulateGrid();     
-        //}
+        private void frmRequestRegister_Load(object sender, EventArgs e)
+        {
+            clsStatics.SetMyGraphics();
+            dtpFrmDate.EditValue = RequestEntryBL.GetMinDate();
+            dtpTodate.EditValue = DateTime.Now;
+            dwOptions.Hide();
+            dwReqCancel.Hide();
+            dwRegister.Show();
+            PopulateGrid();
+        }
+        
 
+
+
+        private void frmRequestRegister_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (BsfGlobal.g_bWorkFlow == true)
+            {
+                try { Parent.Controls.Owner.Hide(); }
+                catch { }
+            }
+            else
+            {
+                CommFun.DW1.Hide(>);
+                CommFun.RP1.Controls.Clear();
+            }
+        }
         #endregion
 
         #region Functions
