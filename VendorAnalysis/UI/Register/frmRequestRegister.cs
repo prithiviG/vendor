@@ -69,7 +69,7 @@ namespace VendorAnalysis
             }
             else
             {
-                CommFun.DW1.Hide();
+                CommFun.DW1.Hide(>);
                 CommFun.RP1.Controls.Clear();
             }
         }
