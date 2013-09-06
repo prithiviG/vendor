@@ -20,7 +20,7 @@ namespace VendorAnalysis
 
                
 
-        #region Variabless
+        #region Variables
         VendorAnalysis.BusinessLayer.RequestEntryBL oReqBL;
         public static Telerik.WinControls.UI.Docking.DocumentWindow m_oDW = new Telerik.WinControls.UI.Docking.DocumentWindow();
         public Telerik.WinControls.UI.RadPanel Radpanel { get; set; }
@@ -31,7 +31,7 @@ namespace VendorAnalysis
         int RequestId = 0;
         DataTable dtRQC = null;
 
-        #endregion
+     //   #endregion
 
 
         #region Constructor
@@ -69,7 +69,7 @@ namespace VendorAnalysis
             }
             else
             {
-                CommFun.DW1.Hide(>);
+                CommFun.DW1.Hide();
                 CommFun.RP1.Controls.Clear();
             }
         }
