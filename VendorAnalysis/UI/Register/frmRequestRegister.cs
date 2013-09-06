@@ -17,7 +17,11 @@ namespace VendorAnalysis
 {
     public partial class frmRequestRegister : Form
     {
-        #region Variables
+
+       void 
+        
+
+        #region Variabless
         VendorAnalysis.BusinessLayer.RequestEntryBL oReqBL;
         public static Telerik.WinControls.UI.Docking.DocumentWindow m_oDW = new Telerik.WinControls.UI.Docking.DocumentWindow();
         public Telerik.WinControls.UI.RadPanel Radpanel { get; set; }
@@ -30,6 +34,7 @@ namespace VendorAnalysis
 
         #endregion
 
+
         #region Constructor
 
         public frmRequestRegister()
@@ -41,6 +46,19 @@ namespace VendorAnalysis
 #endregion
 
         #region Form Load
+       constant 
+        //private void frmRequestRegister_Load(object sender, EventArgs e)
+        //{
+        //    clsStatics.SetMyGraphics();
+        //    dtpFrmDate.EditValue = RequestEntryBL.GetMinDate();
+        //    dtpTodate.EditValue = DateTime.Now;
+        //    dwOptions.Hide();
+        //    dwReqCancel.Hide();
+        //    dwRegister.Show();
+        //    PopulateGrid();     
+        //}
+        
+
 
         private void frmRequestRegister_Load(object sender, EventArgs e)
         {
