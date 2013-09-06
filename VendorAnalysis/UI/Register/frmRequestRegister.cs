@@ -18,8 +18,7 @@ namespace VendorAnalysis
     public partial class frmRequestRegister : Form
     {
 
-       void 
-        
+               
 
         #region Variabless
         VendorAnalysis.BusinessLayer.RequestEntryBL oReqBL;
@@ -46,33 +45,33 @@ namespace VendorAnalysis
 #endregion
 
         #region Form Load
-       constant 
-        //private void frmRequestRegister_Load(object sender, EventArgs e)
-        //{
-        //    clsStatics.SetMyGraphics();
-        //    dtpFrmDate.EditValue = RequestEntryBL.GetMinDate();
-        //    dtpTodate.EditValue = DateTime.Now;
-        //    dwOptions.Hide();
-        //    dwReqCancel.Hide();
-        //    dwRegister.Show();
-        //    PopulateGrid();     
-        //}
+
+        private void frmRequestRegister_Load(object sender, EventArgs e)
+        {
+            clsStatics.SetMyGraphics();
+            dtpFrmDate.EditValue = RequestEntryBL.GetMinDate();
+            dtpTodate.EditValue = DateTime.Now;
+            dwOptions.Hide();
+            dwReqCancel.Hide();
+            dwRegister.Show();
+            PopulateGrid();
+        }
         
 
 
 
         private void frmRequestRegister_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //if (BsfGlobal.g_bWorkFlow == true)
-            //{
-            //    try { Parent.Controls.Owner.Hide(); }
-            //    catch { }
-            //}
-            //else
-            //{
-            //    CommFun.DW1.Hide();
-            //    CommFun.RP1.Controls.Clear();
-            //}
+            if (BsfGlobal.g_bWorkFlow == true)
+            {
+                try { Parent.Controls.Owner.Hide(); }
+                catch { }
+            }
+            else
+            {
+                CommFun.DW1.Hide();
+                CommFun.RP1.Controls.Clear();
+            }
         }
         #endregion
 
