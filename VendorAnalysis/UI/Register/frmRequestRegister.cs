@@ -40,7 +40,7 @@ namespace VendorAnalysis
 
 #endregion
 
-        #region Form Load
+        
 
         private void frmRequestRegister_Load(object sender, EventArgs e)
         {
