@@ -63,16 +63,16 @@ namespace VendorAnalysis
 
         private void frmRequestRegister_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (BsfGlobal.g_bWorkFlow == true)
-            {
-                try { Parent.Controls.Owner.Hide(); }
-                catch { }
-            }
-            else
-            {
-                CommFun.DW1.Hide();
-                CommFun.RP1.Controls.Clear();
-            }
+            //if (BsfGlobal.g_bWorkFlow == true)
+            //{
+            //    try { Parent.Controls.Owner.Hide(); }
+            //    catch { }
+            //}
+            //else
+            //{
+            //    CommFun.DW1.Hide();
+            //    CommFun.RP1.Controls.Clear();
+            //}
         }
         #endregion
 
