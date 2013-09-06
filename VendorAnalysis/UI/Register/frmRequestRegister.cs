@@ -16,10 +16,7 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 namespace VendorAnalysis
 {
     public partial class frmRequestRegister : Form
-    {
-
-        
-
+    
         #region Variabless
         VendorAnalysis.BusinessLayer.RequestEntryBL oReqBL;
         public static Telerik.WinControls.UI.Docking.DocumentWindow m_oDW = new Telerik.WinControls.UI.Docking.DocumentWindow();
@@ -32,8 +29,6 @@ namespace VendorAnalysis
         DataTable dtRQC = null;
 
         #endregion
-
-
         #region Constructor
 
         public frmRequestRegister()
@@ -45,8 +40,6 @@ namespace VendorAnalysis
 #endregion
 
         #region Form Load
-      
-
 
         //private void frmRequestRegister_Load(object sender, EventArgs e)
         //{
